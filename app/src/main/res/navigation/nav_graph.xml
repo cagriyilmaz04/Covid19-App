@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/countriesFragment">
+    <fragment
+        android:id="@+id/countriesFragment"
+        android:name="com.example.covid19_vaccination.view.CountriesFragment"
+        android:label="fragment_countries"
+        tools:layout="@layout/fragment_countries" >
+        <action
+            android:id="@+id/action_countriesFragment_to_datasFragment"
+            app:destination="@id/datasFragment" />
+        <action
+            android:id="@+id/action_countriesFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/datasFragment"
+        android:name="com.example.covid19_vaccination.view.DatasFragment"
+        android:label="fragment_datas"
+        tools:layout="@layout/fragment_datas" >
+        <action
+            android:id="@+id/action_datasFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_datasFragment_to_countriesFragment"
+            app:destination="@id/countriesFragment" />
+        <argument
+            android:name="ulke_adi"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="ulke_resim"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.covid19_vaccination.view.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_countriesFragment"
+            app:destination="@id/countriesFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_datasFragment"
+            app:destination="@id/datasFragment" />
+    </fragment>
+</navigation>

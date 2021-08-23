@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Covid19</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="continent_name">Asya</string>
+    <string name="ulke_adi">Ülke Adı</string>
+</resources>
